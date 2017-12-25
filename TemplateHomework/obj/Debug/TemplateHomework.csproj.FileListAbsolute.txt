@@ -1,9 +1,0 @@
-C:\Users\Peter Ji\Desktop\data\MyProj\DesignPattern\template\homework\TemplateHomework\TemplateHomework\bin\Debug\TemplateHomework.exe.config
-C:\Users\Peter Ji\Desktop\data\MyProj\DesignPattern\template\homework\TemplateHomework\TemplateHomework\bin\Debug\TemplateHomework.exe
-C:\Users\Peter Ji\Desktop\data\MyProj\DesignPattern\template\homework\TemplateHomework\TemplateHomework\bin\Debug\TemplateHomework.pdb
-C:\Users\Peter Ji\Desktop\data\MyProj\DesignPattern\template\homework\TemplateHomework\TemplateHomework\obj\Debug\TemplateHomework.csprojResolveAssemblyReference.cache
-C:\Users\Peter Ji\Desktop\data\MyProj\DesignPattern\template\homework\TemplateHomework\TemplateHomework\obj\Debug\TemplateHomework.exe
-C:\Users\Peter Ji\Desktop\data\MyProj\DesignPattern\template\homework\TemplateHomework\TemplateHomework\obj\Debug\TemplateHomework.pdb
-C:\repository\PeterJi\SharingGroup_Homework\TemplateMethodPattern\TemplateHomework\bin\Debug\TemplateHomework.exe.config
-C:\repository\PeterJi\SharingGroup_Homework\TemplateMethodPattern\TemplateHomework\obj\Debug\TemplateHomework.exe
-C:\repository\PeterJi\SharingGroup_Homework\TemplateMethodPattern\TemplateHomework\obj\Debug\TemplateHomework.pdb
