@@ -1,44 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateHomework
 {
-    public class NotifyMail
+    /// <summary>
+    /// 通知信件。
+    /// </summary>
+    /// <seealso cref="TemplateHomework.Mail" />
+    public class NotifyMail : Mail
     {
-        private string _receiver;
-        private string _title;
+        /// <summary>
+        /// 內容。
+        /// </summary>
         private string _body;
-        private bool _noticeSupervisor;
 
+        /// <summary>
+        /// 初始化 <see cref="NotifyMail"/> 類別新的執行個體。
+        /// </summary>
+        /// <param name="title">標題。</param>
+        /// <param name="receiver">收件者。</param>
         public NotifyMail(string title, string receiver)
+            : base(title, receiver)
         {
-            _title = title;
-            _receiver = receiver;
         }
 
-        public void MakeMailTitle()
-        {
-            Console.WriteLine("標題:" + _title);
-        }
-
-        public void MakeMailReceiver()
-        {
-            Console.WriteLine("收件人:" + _receiver);
-        }
-
-        public void MakeMailBody()
+        /// <summary>
+        /// 製作信件內容。
+        /// </summary>
+        protected override void MakeMailBody()
         {
             Console.WriteLine("開始寫信 - 內容");
             this._body = "這是一封通知信";
             Console.WriteLine("信件內容:" + this._body);
-        }
-
-        public void Send()
-        {
-            Console.WriteLine("寄信完成");
         }
     }
 }

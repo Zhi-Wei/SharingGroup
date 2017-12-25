@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateHomework
 {
-    class Program
+    /// <summary>
+    /// 程式。
+    /// </summary>
+    internal class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// 主方法。
+        /// </summary>
+        /// <param name="args">參數集合。</param>
+        private static void Main(string[] args)
         {
             Console.WriteLine("========================通知信============================");
-            NotifyMail notifyMail = new NotifyMail("通知信","peterji@gmail.com;");
-            notifyMail.MakeMailTitle();
-            notifyMail.MakeMailReceiver();
-            notifyMail.MakeMailBody();
-            notifyMail.Send();
+            NotifyMail notifyMail = new NotifyMail("通知信", "peterji@gmail.com;");
+            notifyMail.SendProcess();
 
             Console.WriteLine("========================警告信============================");
             ErrorMail errorMail = new ErrorMail("警告信", "peterji@gmail.com;");
@@ -24,6 +24,7 @@ namespace TemplateHomework
             Console.WriteLine("========================警告信============================");
             ErrorMail errorMail2 = new ErrorMail("警告信", "peterji@gmail.com;", true);
             errorMail2.SendProcess();
+
             Console.ReadLine();
         }
     }
