@@ -1,63 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateHomework
 {
-    public class ErrorMail
+    /// <summary>
+    /// 錯誤通知信件。
+    /// </summary>
+    /// <seealso cref="TemplateHomework.Mail" />
+    public class ErrorMail : Mail
     {
-        private string _receiver;
-        private string _title;
+        /// <summary>
+        /// 內容。
+        /// </summary>
         private string _body;
-        private bool _noticeSupervisor;
 
-        public ErrorMail(string title, string receiver, bool noticeSupervisor = false)
+        /// <summary>
+        /// 初始化 <see cref="ErrorMail"/> 類別新的執行個體。
+        /// </summary>
+        /// <param name="title">標題。</param>
+        /// <param name="receiver">收件者。</param>
+        /// <param name="isNoticeSupervisor">是否通知管理者，是為 <c>true</c> 否則為 <c>false</c>。</param>
+        public ErrorMail(string title, string receiver, bool isNoticeSupervisor = false)
+            : base(title, receiver, isNoticeSupervisor)
         {
-            _title = title;
-            _receiver = receiver;
-            _noticeSupervisor = noticeSupervisor;
         }
 
-        private void MakeMailTitle()
-        {
-            Console.WriteLine("標題:" + _title);
-        }
-
-        private void MakeMailReceiver()
-        {
-            Console.WriteLine("收件人:" + _receiver);
-        }
-
-        private void AddReceiverSupervisor()
-        {
-            _receiver += "xxx@gmail.com;";
-            Console.WriteLine("收件人:" + _receiver);
-        }
-
-        private void MakeMailBody()
+        /// <summary>
+        /// 製作信件內容。
+        /// </summary>
+        protected override void MakeMailBody()
         {
             Console.WriteLine("開始寫信 - 內容");
             this._body = "這是一封警告信";
             Console.WriteLine("信件內容:" + this._body);
-        }
-
-        private void Send()
-        {
-            Console.WriteLine("寄信完成");
-        }
-
-        public void SendProcess()
-        {
-            this.MakeMailTitle();
-            this.MakeMailReceiver();
-            if (this._noticeSupervisor)
-            {
-                this.AddReceiverSupervisor();
-            }
-
-            this.MakeMailBody();
         }
     }
 }
